@@ -13,19 +13,20 @@
 </head>
 <body>
     <form id="chat">
-				<div class="messages"></div>
-				<input class="input-username" type="text" name="username" placeholder="Digite seu usuário">
-				<div class="div-write-message">
-					<input type="text" name="message" placeholder="Digite sua mensagem">
-					<button type="submit">Enviar</button>
-				</div>
+        <div class="messages">
+        </div>
+        <input class="input-username" type="text" name="username" placeholder="Digite seu usuário">
+        <div class="div-write-message">
+            <input class="input-message" type="text" name="message" placeholder="Digite sua mensagem">
+            <button type="submit">Enviar</button>
+        </div>
     </form>
     
     <script type="text/javascript">
         var socket = io('http://localhost:3000');
 
         function renderMessage(message) {
-            $('.messages').append('<div class="message"><strong>'+ message.author + '</strong>: ' + message.message +'</div>');
+            $('.messages').append('<div class="message"><div class="div-box-message"><span class="span-username">'+ message.author + '</span> <p>' + message.message +'</p></div></div>');
         }
 
         socket.on('previousMessages', function(messages) {
@@ -53,6 +54,8 @@
 
             socket.emit('sendMessage', messageObject)
 
+            }else{
+                alert("Preencha todos os campos!");
             }
         })
 

@@ -1,4 +1,4 @@
-# Clone Pipefy
+# Simple Chat
 
 ![GitHub issue](https://img.shields.io/github/issues/NYDino/simple-chat)
 ![GitHub forks](https://img.shields.io/github/forks/NYDino/simple-chat)

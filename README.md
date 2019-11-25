@@ -10,7 +10,7 @@ Realtime chat made with NodeJS + Socket.io.
 
 ## Installation
 
-Use the package manager [yarn](https://yarnpkg.com/en/) to install the necessary libs and start the project.
+Use the package manager [yarn](https://yarnpkg.com/en/) to install the necessary libs.
 
 ```bash
 yarn install
